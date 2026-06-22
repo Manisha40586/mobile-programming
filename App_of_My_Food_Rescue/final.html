@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Rescue App</title>
+<link rel="stylesheet" href="final.css">
+</head>
+<body>
+<!-- LOGIN PAGE -->
+<div id="loginPage">
+    <div class="login-box">
+        <div class="logo">
+          🍲
+        </div>
+        <h1>Food Rescue</h1>
+        <p>Reduce Food Waste, Feed People</p>
+        <input
+        type="text"
+        id="username"
+        placeholder="Username">
+        <input
+        type="password"
+        id="password"
+        placeholder="Password">
+        <button onclick="login()">
+            Login
+        </button>
+    </div>
+</div>
+<!-- MAIN APP -->
+<div id="app">
+<header>
+    <h2>🍲 Food Rescue</h2>
+    <div>
+        <button onclick="darkMode()">
+          🌙
+        </button>
+        <button onclick="logout()">
+            Logout
+        </button>
+    </div>
+</header>
+<section class="dashboard">
+    <h3 id="clock"></h3>
+    <h3>
+        Total Donations:
+        <span id="count">0</span>
+    </h3>
+</section>
+<section class="donate">
+<h2>Donate Food</h2>
+<input
+type="text"
+id="foodName"
+placeholder="Food Name">
+<select id="category">
+<option>Cooked Food</option>
+<option>Fruits</option>
+<option>Vegetables</option>
+<option>Bakery</option>
+</select>
+<input
+type="text"
+id="location"
+placeholder="Location">
+<button onclick="addFood()">
+Donate Food
+</button>
+</section>
+<section>
+<input
+type="text"
+id="searchInput"
+placeholder="Search Food">
+
+</section>
+
+<section>
+
+<h2>Available Food</h2>
+
+<div id="foodList"></div>
+
+</section>
+
+</div>
+
+<script src="final.js"></script>
+
+</body>
+</html>
