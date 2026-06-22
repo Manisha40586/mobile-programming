@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Rescue Contact Form</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#f4f4f4;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+padding:20px;
+}
+
+.container{
+background:#fff;
+padding:30px;
+width:100%;
+max-width:700px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+text-align:center;
+margin-bottom:20px;
+color:green;
+}
+
+form{
+display:flex;
+flex-direction:column;
+gap:12px;
+}
+
+input,select,textarea{
+padding:12px;
+border:1px solid #ccc;
+border-radius:5px;
+font-size:16px;
+}
+
+button{
+padding:12px;
+background:green;
+color:white;
+border:none;
+cursor:pointer;
+font-size:16px;
+border-radius:5px;
+}
+
+button:hover{
+background:darkgreen;
+}
+
+#message{
+margin-top:15px;
+text-align:center;
+font-weight:bold;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+<h1>Food Rescue Contact Form</h1>
+
+<form id="contactForm">
+
+<input type="text" id="name" placeholder="Full Name" required>
+
+<input type="email" id="email" placeholder="Email Address" required>
+
+<input type="text" id="phone" placeholder="Phone Number" required>
+
+<input type="text" id="organization" placeholder="Organization Name">
+
+<select id="donationType" required>
+<option value="">Donation Type</option>
+<option>Cooked Food</option>
+<option>Raw Food</option>
+<option>Packaged Food</option>
+<option>Financial Support</option>
+</select>
+
+<input type="number" id="quantity" placeholder="Food Quantity">
+
+<input type="text" id="address" placeholder="Pickup Address" required>
+
+<input type="text" id="city" placeholder="City" required>
+
+<input type="date" id="date" required>
+
+<textarea id="details" rows="4"
+placeholder="Additional Details"></textarea>
+
+<button type="submit">
+Submit Donation
+</button>
+
+</form>
+
+<p id="message"></p>
+
+</div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

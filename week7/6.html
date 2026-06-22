@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Registration Form</title>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        font-family:Arial, sans-serif;
+    }
+
+    body{
+        background:#eaf4ff;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
+    }
+
+    .container{
+        width:600px;
+        background:white;
+        padding:30px;
+        border-radius:10px;
+        box-shadow:0 0 15px rgba(0,0,0,0.2);
+    }
+
+    h2{
+        text-align:center;
+        color:#0d6efd;
+        margin-bottom:20px;
+    }
+
+    .form-group{
+        margin-bottom:15px;
+    }
+
+    label{
+        display:block;
+        margin-bottom:5px;
+        font-weight:bold;
+        color:#333;
+    }
+
+    input,
+    select,
+    textarea{
+        width:100%;
+        padding:10px;
+        border:1px solid #ccc;
+        border-radius:5px;
+        font-size:16px;
+    }
+
+    textarea{
+        resize:none;
+        height:80px;
+    }
+
+    .gender{
+        display:flex;
+        gap:20px;
+    }
+
+    .gender label{
+        font-weight:normal;
+    }
+
+    button{
+        width:100%;
+        padding:12px;
+        background:#0d6efd;
+        color:white;
+        border:none;
+        border-radius:5px;
+        font-size:18px;
+        cursor:pointer;
+    }
+
+    button:hover{
+        background:#0b5ed7;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Student Registration Form</h2>
+
+    <form id="studentForm">
+
+        <div class="form-group">
+            <label>Student ID</label>
+            <input type="text" id="studentId">
+        </div>
+
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" id="firstName">
+        </div>
+
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" id="lastName">
+        </div>
+
+        <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" id="dob">
+        </div>
+
+        <div class="form-group">
+            <label>Gender</label>
+            <div class="gender">
+                <label><input type="radio" name="gender" value="Male"> Male</label>
+                <label><input type="radio" name="gender" value="Female"> Female</label>
+                <label><input type="radio" name="gender" value="Other"> Other</label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" id="email">
+        </div>
+
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" id="phone">
+        </div>
+
+        <div class="form-group">
+            <label>Address</label>
+            <textarea id="address"></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Course</label>
+            <select id="course">
+                <option>BSc IT</option>
+                <option>BCA</option>
+                <option>BIT</option>
+                <option>BBA</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Semester</label>
+            <select id="semester">
+                <option>1st Semester</option>
+                <option>2nd Semester</option>
+                <option>3rd Semester</option>
+                <option>4th Semester</option>
+                <option>5th Semester</option>
+                <option>6th Semester</option>
+                <option>7th Semester</option>
+                <option>8th Semester</option>
+            </select>
+        </div>
+
+        <button type="button" onclick="registerStudent()">
+            Register Student
+        </button>
+
+    </form>
+
+</div>
+
+<script src="6.js"></script>
+
+</body>
+</html>
